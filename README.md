@@ -9,4 +9,3 @@ The setups steps expect following tools installed on the system.
 #### Check out the repository
 
 git clone git@github.com:SidiromUA/checklists_and_audits.git
-git clone project-name.git
