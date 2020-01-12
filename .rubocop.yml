@@ -1,0 +1,25 @@
+AllCops:
+  Exclude:
+    - db/**/*
+    - test/**/*
+    - config/**/*
+    - bin/**/*
+    - Gemfile
+    - config.ru
+    - Rakefile
+
+Style/Documentation:
+  Enabled: false
+
+# Customize rules
+Metrics/LineLength:
+  Max: 95
+
+MethodLength:
+  Max: 35
+
+Metrics/AbcSize:
+   Enabled: false
+
+BlockLength:
+  Max: 70
