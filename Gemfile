@@ -11,6 +11,8 @@ gem 'puma', '~> 3.0'
 gem 'sass-rails', '~> 5.0'
 # Use UI guideline
 gem 'materialize-sass', '~> 1.0'
+# Use paginate
+gem 'will_paginate', '~> 3.2', '>= 3.2.1'
 gem 'autoprefixer-rails', '~> 9.7', '>= 9.7.3'
 # Use Simple Form
 gem 'simple_form', '~> 5.0', '>= 5.0.1'
