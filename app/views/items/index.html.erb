@@ -1,11 +1,22 @@
 <body>
   <div class="container">
-    <h2 class="#d1c4e9 deep-purple lighten-4" ><%= link_to 'New Item', new_item_path %></h2>
+    <center>
+      <h2 class="btn-floating btn-large waves-effect waves-light blue">
+        <%= link_to new_item_path do %>
+          <i class="material-icons">add</i>
+        <% end %>
+      </h2>
+    </center>
     <table>
+      <tr>
+        <td>Title</td>
+        <td>Description</td>
+        <td>Action</td>
+      </tr>
       <% @items.each do |item| %>
         <tr>
           <td>
-            <%= link_to item.title, item %>
+            <h5><%= link_to item.title, item %></h5>
           </td>
           <td> 
             <%= item.description %>
@@ -21,7 +32,7 @@
         </tr>
       <% end %>
     </table>
-    <%= will_paginate @items %>
+    <center><%= will_paginate @items %></center>
   </div>
 </body>
 

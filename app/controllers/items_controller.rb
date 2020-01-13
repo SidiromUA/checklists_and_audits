@@ -4,7 +4,7 @@ class ItemsController < ApplicationController
   before_action :find_item, only: %i[show edit update destroy]
 
   def index
-    @items = Item.order(id: :desc).paginate(page: params[:page], per_page: 4)
+    @items = Item.order(id: :desc).paginate(page: params[:page], per_page: 10)
   end
 
   def new
