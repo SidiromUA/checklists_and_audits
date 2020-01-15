@@ -9,6 +9,31 @@
   </head>
 
   <body>
+
+    <nav class='nav-wrapper'>
+      <ul id="nav-mobile">
+        <li><%= link_to 'Checklist', root_path %></li>
+        <li><%= link_to 'Sign Up', new_user_registration_path %></li>
+        <% if current_user.present? %>
+          <%= link_to 'Sign Out', destroy_user_session_path, method: :delete %>
+        <% else %>
+        <li><%= link_to 'Login', new_user_session_path %></li>
+        <% end %>
+      </ul>
+    </nav>
+
+    <% if user_signed_in? %>
+    <center>
+      <h2 class="btn-floating btn-large waves-effect waves-light blue">
+        <%= link_to new_item_path do %>
+          <i class="material-icons">add</i>
+        <% end %>
+      </h2>
+    </center>
+    <% end %>
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+
     <%= yield %>
   </body>
 </html>
