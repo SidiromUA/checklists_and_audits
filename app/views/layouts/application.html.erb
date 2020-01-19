@@ -21,19 +21,14 @@
         <% end %>
       </ul>
     </nav>
-
-    <% if user_signed_in? %>
+    
     <center>
-      <h2 class="btn-floating btn-large waves-effect waves-light blue">
-        <%= link_to new_item_path do %>
-          <i class="material-icons">add</i>
-        <% end %>
-      </h2>
+    <h3>
+    <p class="notice"><font color="green"><%= notice %></p></font>
+    <p class="alert"><font color="red"><%= alert %></p></font>
     </center>
-    <% end %>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
-
+    </h3>
+    
     <%= yield %>
   </body>
 </html>

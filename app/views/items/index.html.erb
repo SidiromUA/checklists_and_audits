@@ -1,15 +1,23 @@
+<% if user_signed_in? %>
+  <center>
+    <h2 class="btn-floating btn-large waves-effect waves-light blue">
+      <%= link_to new_item_path do %>
+        <i class="material-icons">add</i>
+      <% end %>
+    </h2>
+  </center>
 <body>
   <div class="container">
     <table>
       <tr>
-        <td>Title</td>
+        <td>Title <i>(Number of questions)</i></td>
         <td>Description</td>
         <td>Action</td>
       </tr>
       <% @items.each do |item| %>
         <tr>
           <td>
-            <h5><%= link_to item.title, item %></h5>
+            <h5><%= link_to item.title, item %></h5><i>(Number)</i>
           </td>
           <td> 
             <%= item.description %>
@@ -28,4 +36,6 @@
     <center><%= will_paginate @items %></center>
   </div>
 </body>
-
+<% else %>
+  <% render 'layouts/static_page' %>
+<% end %>
