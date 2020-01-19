@@ -4,7 +4,10 @@ class ItemsController < ApplicationController
   before_action :find_item, only: %i[show edit update destroy]
 
   def index
-    @items = Item.order(id: :desc).paginate(page: params[:page], per_page: 10)
+    if user_signed_in?
+      @items = Item.where(user_id: current_user.id)
+                 .order(id: :desc).paginate(page: params[:page], per_page: 10)
+    end
   end
 
   def new
@@ -15,6 +18,7 @@ class ItemsController < ApplicationController
 
   def create
     @item = Item.new(item_params)
+    @item.user_id = current_user.id if current_user
     if @item.save
       redirect_to root_path
     else
