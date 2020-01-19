@@ -4,5 +4,6 @@ class Item < ApplicationRecord
   validates :title, presence: true
   validates :description, presence: true
   validates :title, length: { maximum: 40 }
-  # validates :description, length: { maximum: 500 }
+
+  belongs_to :user
 end
