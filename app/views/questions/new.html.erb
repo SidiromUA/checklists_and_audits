@@ -1,0 +1,12 @@
+ <body>
+  <div class="container">
+    <%= simple_form_for checklist_path(@checklist) do |f| %> 
+      <%= f.input :title %>
+      <%= f.input :description %>
+      <center>
+      <br>
+      <%= f.button :submit %>
+      </center>
+    <% end %>
+  </div>
+</body>
