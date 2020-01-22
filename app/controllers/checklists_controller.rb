@@ -12,7 +12,6 @@ class ChecklistsController < ApplicationController
 
   def new
     @checklist = Checklist.new
-    3.times { @checklist.questions.build }
   end
 
   def show; end
