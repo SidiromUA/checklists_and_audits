@@ -1,0 +1,20 @@
+<center>
+  <body>
+    <div class="container">
+      <h2><%= @checklist.title %></h2>
+      <p><%= @checklist.description %></p>
+      <br/>
+      <%= link_to root_path do %>
+      <i class="Small material-icons">backspace</i>
+      <% end %>
+
+      <%= link_to edit_checklist_path(@checklist) do %>
+      <i class="Small material-icons">edit</i>
+      <% end %>
+
+      <%= link_to checklist_path(@checklist), method: :delete, data: { confirm: 'Are you sure?' } do %>
+      <i class="Small material-icons">delete</i>
+      <% end %>
+    </div>
+  </body>
+</center>
