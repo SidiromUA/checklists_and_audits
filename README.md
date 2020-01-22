@@ -1,11 +1,14 @@
-#### Prerequisites
+# Checklists_and_audits
 
-The setups steps expect following tools installed on the system.
+# Setup
 
-* Ruby version 2.6.3
+$ git git@github.com:SidiromUA/checklists_and_audits.git
+$ cd checklists_and_audits
+$ rvm use ruby-2.6.3
+# If you do not have installed this version of ruby please install it.
+$ rvm install 2.6.3 # or $ rvm install ruby-2.6.3
+$ bundle
 
-* Rails version 5.0.0
+$ rails db:setup
 
-#### Check out the repository
-
-git clone git@github.com:SidiromUA/checklists_and_audits.git
+$ rails s
