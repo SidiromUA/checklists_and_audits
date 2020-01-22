@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class Question < ApplicationRecord
-  belongs_to :item
+  belongs_to :checklist
 
   validates :title, presence: true
   validates :description, presence: true

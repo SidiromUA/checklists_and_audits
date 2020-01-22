@@ -5,7 +5,7 @@ class Checklist < ApplicationRecord
 
   has_many :questions
 
-  accepts_nested_attributes_for :questions, allow_destroy: true
+  # accepts_nested_attributes_for :questions, allow_destroy: true
 
   validates :title, presence: true
   validates :description, presence: true
